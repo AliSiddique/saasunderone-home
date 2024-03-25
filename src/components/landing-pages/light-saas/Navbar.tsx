@@ -1,98 +1,154 @@
 "use client";
-import { useState } from "react";
-import { useSession } from "next-auth/react";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
 
+import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { useTheme } from "next-themes";
+import { useEffect, useRef, useState } from "react";
 
-interface Navigation {
-  title: string;
-  href: string;
-}
-  const navigation:Navigation[] = [
-    { title: "Pricing", href: "#" },
-    { title: "Contact", href: "#" },
-  ];
-export default function Navbar() {
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const { data: session } = useSession();
+const SCROLL_BOUNDARY = 120;
 
+export default function StickyHeader() {
+  const [scrollY, setScrollY] = useState(0);
+  const headerParentRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
 
+  const getBreakpoint = (width: number) => {
+    if (width < 640) return "xs";
+    if (width < 768) return "sm";
+    if (width < 1024) return "md";
+    if (width < 1280) return "lg";
+    if (width < 1536) return "xl";
+    return "2xl";
+  };
+
+  const [breakpoint, setBreakpoint] = useState(() =>
+  
+    getBreakpoint(window.innerWidth),
+  );
+
+  useEffect(() => {
+    const updateBreakpoint = () =>
+      setBreakpoint(getBreakpoint(window.innerWidth));
+    window.addEventListener("resize", updateBreakpoint);
+    return () => window.removeEventListener("resize", updateBreakpoint);
+  }, []);
+
+  const active =
+    scrollY >= SCROLL_BOUNDARY ||
+    breakpoint === "xs" ||
+    breakpoint === "sm" ||
+    breakpoint === "md";
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (headerParentRef.current) {
+        setScrollY(headerParentRef.current.scrollTop);
+      }
+    };
+
+    const parentElement = headerParentRef.current;
+    parentElement?.addEventListener("scroll", handleScroll);
+
+    return () => {
+      parentElement?.removeEventListener("scroll", handleScroll);
+    };
+  }, [headerParentRef.current]);
 
   return (
-    <nav className=" backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-200 sticky top-0 z-10   w-full  ">
-      <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-        <div className="flex items-center justify-between py-3 md:py-5 md:block">
-          <Link href="/">
-            <Image
-              src="/logo.png"
-              width={120}
-              height={50}
-              className="h-8 w-8 rounded-full"
-              alt="Float UI logo"
-            />
-          </Link>
-          <div className="md:hidden">
-            <button
-              className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
-              onClick={() => setMobileOpen(!mobileOpen)}
-            >
-              {mobileOpen ? (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              ) : (
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 8h16M4 16h16"
-                  />
-                </svg>
-              )}
-            </button>
+    <div ref={headerParentRef} className="max-h-[450px] overflow-y-scroll">
+      <div className="h-[100vh]">
+        <header className="mx-auto flex max-w-5xl items-center justify-between bg-transparent px-10 py-7 dark:bg-transparent">
+          <div className="hidden flex-row items-center justify-center gap-2 lg:flex">
+            <a href="#" className="flex h-8 w-8">
+              <img src="/icon.png" className="h-full w-full" />
+            </a>
+            <a href="#">Magic UI</a>
           </div>
-        </div>
-        <div
-          className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${mobileOpen ? "block" : "hidden"}`}
-        >
-          <ul className="justify-center items-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-            {navigation.map((item, idx) => {
-              return (
-                <li key={idx} className="text-gray-900 dark:text-white">
-                  <Link href={item.href}>{item.title}</Link>
+          {/* <h1 className="hidden lg:flex">Logo</h1> */}
+          <div className="absolute inset-x-0 top-6 z-50 flex items-center justify-center">
+            <motion.div
+              initial={{ x: 0 }}
+              animate={{
+                boxShadow: active
+                  ? theme === "dark"
+                    ? "0 0 0 1px rgba(255,255,255,.08), 0 1px 2px -1px rgba(255,255,255,.08), 0 2px 4px rgba(255,255,255,.04)"
+                    : "0 0 0 1px rgba(17,24,28,.08), 0 1px 2px -1px rgba(17,24,28,.08), 0 2px 4px rgba(17,24,28,.04)"
+                  : "none",
+              }}
+              transition={{
+                ease: "linear",
+                duration: 0.05,
+                delay: 0.05,
+              }}
+              className={cn(
+                "supports-backdrop-blur:bg-white/90 mx-4 flex w-full items-center justify-center overflow-hidden rounded-full bg-white bg-white/40 px-3 py-2.5 backdrop-blur-md transition-all dark:bg-black/20 lg:w-auto lg:p-1.5 lg:py-2",
+              )}
+            >
+              <ul className="flex h-full w-full flex-row justify-between gap-6 lg:flex-row lg:justify-start lg:gap-1">
+                <li className="flex items-center justify-center px-2 py-0.5">
+                  <a href="#" className="flex h-8 w-8 lg:hidden">
+                    <img src="/icon.png" className="h-full w-full" />
+                  </a>
+                  <a href="#" className="hidden lg:flex">
+                    Home
+                  </a>
                 </li>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="hidden md:inline-block">
-          <Button variant="outline" size="lg">
-          <Link
-            href={session ? "/dashboard" : "/login"}
-          >
-            {session ? "Dashboard" : "Login"}
-          </Link>
-          </Button>
-        </div>
+                <li className="hidden items-center justify-center px-2 py-0.5 lg:flex">
+                  <a href="#">Features</a>
+                </li>
+                <li className="hidden items-center justify-center px-2 py-0.5 lg:flex">
+                  <a href="#">Pricing</a>
+                </li>
+                <li className="hidden items-center justify-center px-2 py-0.5 lg:flex">
+                  <a href="#">Contact</a>
+                </li>
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{
+                      width: active ? "auto" : 0,
+                    }}
+                    transition={{
+                      ease: "easeOut",
+                      duration: 0.25,
+                      delay: 0.05,
+                    }}
+                  >
+                    <AnimatePresence>
+                      {active && (
+                        <motion.a
+                          initial={{ x: "125%" }}
+                          animate={{ x: "0" }}
+                          exit={{
+                            x: "125%",
+                            transition: { ease: "easeOut", duration: 2.2 },
+                          }}
+                          transition={{ ease: "easeOut", duration: 0.5 }}
+                          className="relative inline-flex w-fit shrink-0 items-center justify-center gap-x-1.5 overflow-hidden whitespace-nowrap rounded-full bg-neutral-900 px-3 py-1.5 text-white outline-none dark:bg-white dark:text-black"
+                        >
+                          Get Started
+                        </motion.a>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                </AnimatePresence>
+              </ul>
+            </motion.div>
+          </div>
+
+          {/* <div className="flex items-center gap-x-5"> */}
+          <a className="relative hidden w-fit items-center justify-center gap-x-1.5 overflow-hidden rounded-full bg-neutral-900 px-3 py-1.5 text-white outline-none dark:bg-white dark:text-black lg:inline-flex">
+            Get Started
+          </a>
+          {/* </div> */}
+        </header>
+
+        <h2 className="mt-12 flex flex-col items-center justify-center text-center">
+          Scroll down
+          <ChevronDown className="animate-bounce" />
+        </h2>
       </div>
-    </nav>
+    </div>
   );
 }
