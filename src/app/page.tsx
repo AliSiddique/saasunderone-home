@@ -1,6 +1,13 @@
-import LandingPageOne from "@/components/landing-pages/light-saas/LandingPageOne";
-import LandingPageTwo from "@/components/landing-pages/dark-saas/LandingPageTwo";
 import { config } from "../../config";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Features1 from "@/components/Feature";
+import CTAHome from "@/components/CTA";
+import FeatureTwo from "@/components/FeatureTWO";
+import Pricing from "@/components/Pricing";
+import FAQ from "@/components/FAQ";
+import CTANew from "@/components/CTa2";
+import Footer from "@/components/Footer";
 export const metadata = {
   title: "Home",
   description: "Home Page",
@@ -21,5 +28,18 @@ export const metadata = {
   category: config.category,
 };
 export default function page() {
-  return <LandingPageOne   />;
+  return (
+    <div>
+          <Navbar/>
+
+      <Hero/>
+      <Features1/>
+      <CTAHome/>
+      <FeatureTwo/>
+      <Pricing/>
+      <FAQ/>
+      <CTANew/>
+      <Footer/>
+    </div>
+  )
 }
