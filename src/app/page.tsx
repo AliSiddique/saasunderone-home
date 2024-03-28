@@ -37,7 +37,7 @@ export default function page() {
       <CTAHome/>
       <FeatureTwo/>
       <Pricing/>
-      <FAQ/>
+      {/* <FAQ/> */}
       <CTANew/>
       <Footer/>
     </div>

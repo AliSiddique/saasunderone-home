@@ -4,10 +4,9 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-  { name: 'Product', href: '#' },
-  { name: 'Features', href: '#' },
-  { name: 'Marketplace', href: '#' },
-  { name: 'Company', href: '#' },
+  { name: 'Pricing', href: '#pricing' },
+  { name: 'Docs', href: 'https://docs.saasunderone.com/' },
+  { name: 'Changelog', href: '#' },
 ]
 
 export default function Navbar() {
@@ -19,7 +18,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
-            <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=white" alt="" />
+            <img className="h-8 w-auto rounded-full" src="/logo.png" alt="" />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -40,8 +39,8 @@ export default function Navbar() {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a href="#" className="text-sm font-semibold leading-6 text-white">
-            Log in <span aria-hidden="true">&rarr;</span>
+          <a href="https://nextjs-boilerplate-magna.lemonsqueezy.com/checkout/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9" className="text-sm font-semibold leading-6 text-white">
+           Buy now <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </nav>
@@ -53,7 +52,7 @@ export default function Navbar() {
               <span className="sr-only">Your Company</span>
               <img
                 className="h-8 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="/logo.png"
                 alt=""
               />
             </a>
@@ -81,10 +80,10 @@ export default function Navbar() {
               </div>
               <div className="py-6">
                 <a
-                  href="#"
+                  href="https://nextjs-boilerplate-magna.lemonsqueezy.com/checkout/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
+                  Buy now
                 </a>
               </div>
             </div>

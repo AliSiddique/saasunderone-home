@@ -4,27 +4,27 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 
 const features = [
   {
-    name: 'Invite team members',
-    description: 'Rerum repellat labore necessitatibus reprehenderit molestiae praesentium.',
+    name: 'Authentication',
+    description: 'Authentication with NextAuth.js. Magic Link, OAuth, and passwordless.',
   },
-  { name: 'List view', description: 'Corporis asperiores ea nulla temporibus asperiores non tempore assumenda aut.' },
+  { name: 'Stripe Subscriptions', description: 'Allow your users to pay you with only a few steps.' },
   {
-    name: 'Keyboard shortcuts',
-    description: 'In sit qui aliquid deleniti et. Ad nobis sunt omnis. Quo sapiente dicta laboriosam.',
-  },
-  {
-    name: 'Calendars',
-    description: 'Sed rerum sunt dignissimos ullam. Iusto iure occaecati voluptate eligendi fugiat sequi.',
-  },
-  { name: 'Notifications', description: 'Quos inventore harum enim nesciunt. Aut repellat rerum omnis adipisci.' },
-  { name: 'Boards', description: 'Quae sit sunt excepturi fugit veniam voluptatem ipsum commodi.' },
-  {
-    name: 'Reporting',
-    description: 'Eos laudantium repellat sed architecto earum unde incidunt. Illum sit dolores voluptatem.',
+    name: 'Email templates',
+    description: 'Beautifully designed email templates that are easy to customize and send.',
   },
   {
-    name: 'Mobile app',
-    description: 'Nulla est saepe accusamus nostrum est est. Fugit voluptatum omnis quidem voluptatem.',
+    name: 'SEO Optimized',
+    description: 'SEO optimized pages to help you rank higher on search engines like Google.',
+  },
+  { name: 'Blog', description: 'Write your blogs with ready made MDX' },
+  { name: 'Error handling', description: 'Handle your errors with Next.JS' },
+  {
+    name: 'Ready made design system',
+    description: 'Built with shadcn, a design system for building modern web applications.',
+  },
+  {
+    name: 'Landing pages',
+    description: 'Launch faster with our ready made landing pages.',
   },
 ]
 
