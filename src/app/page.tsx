@@ -8,6 +8,9 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTANew from "@/components/CTa2";
 import Footer from "@/components/Footer";
+import Feature3 from "@/components/Feature3";
+import Feature4 from "@/components/Feature4";
+import Test1 from "@/components/Test1";
 export const metadata = {
   title: "Home",
   description: "Home Page",
@@ -36,6 +39,9 @@ export default function page() {
       <Features1/>
       <CTAHome/>
       <FeatureTwo/>
+      <Feature3/>
+      <Feature4/>
+      <Test1/>
       <Pricing/>
       {/* <FAQ/> */}
       <CTANew/>

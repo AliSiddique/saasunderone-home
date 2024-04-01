@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import colors from "tailwindcss/colors";
+import  defaultTheme  from "tailwindcss/defaultTheme";
 
 const config = {
   darkMode: ["class"],
@@ -12,135 +13,166 @@ const config = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
-      colors: {
-        tremor: {
-          background: {
-            muted: colors.gray[50],
-            subtle: colors.gray[100],
-            DEFAULT: colors.white,
-            emphasis: colors.gray[700],
-          },
-
-          content: {
-            subtle: colors.gray[400],
-            DEFAULT: colors.gray[500],
-            emphasis: colors.gray[700],
-            strong: colors.gray[900],
-            inverted: colors.white,
-          },
-        },
-
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+      fontFamily: {
+        sans: ["Bricolage Grotesque", ...defaultTheme.fontFamily.sans],
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        marqueeLeft: 'marqueeLeft 20s linear infinite',
+        marqueeRight: 'marqueeRight 20s linear infinite',
+        animationPaused: 'paused', //stops on hover
+          scrollerDown: 'scrollerDown 12s linear infinite',
+          scrollerUp: 'scrollerUp 12s linear infinite',
+      },
+      keyframes: {
+        marqueeLeft: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        marqueeRight: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(-0%)' },
+        },
+        scrollerDown: {
+          '0%': {
+            transform: 'translateY(-10em)'
+          },
+          '100%': {
+            transform: 'translateY(14em)'
+          },
+        },
+        scrollerUp: {
+          '0%': {
+            transform: 'translateY(10em)'
+          },
+          '100%': {
+            transform: 'translateY(-14em)'
+          },
+        },
+        'spin-reverse': {
+          to: {
+            transform: 'rotate(-360deg)',
+          },
+        },
+      },
+      boxShadow: {
+        tiny: "0px 1.5px",
+        small: "0px 3px",
+        DEFAULT: "0px 5px",
+        large: "0px 10px",
+      },
+      colors: {
+        black: "#141520",
+        white: "#f5f5f5",
+        green: {
+         50: "#F8FBFC",
+      100: "#F2F7F8",
+      200: "#E1EDEF",
+      300: "#D3E5E8",
+      400: "#C6DDE2",
+      500: "#B7D4DA",
+      600: "#82B5BF",
+      700: "#51919E",
+      800: "#366068",
+      900: "#1C3236"
+        },
+        lila: {
+          50: "#FBFAFF",
+      100: "#F7F5FF",
+      200: "#EAE6FE",
+      300: "#E2DCFE",
+      400: "#D6CEFD",
+      500: "#C8BEFD",
+      600: "#B4A6FC",
+      700: "#A08DFB",
+      800: "#836BFA",
+      900: "#5534F9"
+        },
+        yellow: {
+          50: "#FFFDFA",
+      100: "#FFFAF5",
+      200: "#FFF5EB",
+      300: "#FEEEDC",
+      400: "#FEE9D2",
+      500: "#FEE3C6",
+      600: "#FDC991",
+      700: "#FCA446",
+      800: "#EC7C04",
+      900: "#AA5903"
+        },
+        red: {
+          50: "#FEFBFB",
+      100: "#FDF7F8",
+      200: "#FBEAED",
+      300: "#F8DDE2",
+      400: "#F6D0D7",
+      500: "#F3C4CD",
+      600: "#EEAAB7",
+      700: "#E88D9D",
+      800: "#DE5E75",
+      900: "#BF2743"
+        },
+        //states
+        info: {
+          '50': '#f2f6fc',
+          '100': '#e1eaf8',
+          '200': '#cadaf3',
+          '300': '#a6c3ea',
+          '400': '#7ca4de',
+          '500': '#5d85d4',
+          '600': '#496bc7',
+          '700': '#3f59b6',
+          '800': '#384a95',
+          '900': '#324076',
+          '950': '#222949',
+        },
+        success: {
+          '50': '#f3faf8',
+          '100': '#d7f0ec',
+          '200': '#bfe7e1',
+          '300': '#7ecac1',
+          '400': '#53aea6',
+          '500': '#3a928d',
+          '600': '#2c7572',
+          '700': '#275e5c',
+          '800': '#234c4c',
+          '900': '#20413f',
+          '950': '#0e2425',
+        },
+        warning: {
+          '50': '#fef5ee',
+    '100': '#fce9d8',
+    '200': '#f7ceb1',
+    '300': '#f2ab7e',
+    '400': '#ec804b',
+    '500': '#e75f28',
+    '600': '#d8471e',
+    '700': '#b4341a',
+    '800': '#8f2b1d',
+    '900': '#74261a',
+    '950': '#3e110c',
+        },
+        danger: {
+          '50': '#fdf5f3',
+          '100': '#fce8e4',
+          '200': '#fad5ce',
+          '300': '#f3ac9e',
+          '400': '#ed8f7c',
+          '500': '#e16a52',
+          '600': '#cd4e35',
+          '700': '#ac3f29',
+          '800': '#8f3625',
+          '900': '#773325',
+          '950': '#40170f',
+        },
       },
     },
-    boxShadow: {
-      // light
-      "tremor-input": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-      "tremor-card":
-        "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
-      "tremor-dropdown":
-        "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-      // dark
-      "dark-tremor-input": "0 1px 2px 0 rgb(0 0 0 / 0.05)",
-      "dark-tremor-card":
-        "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
-      "dark-tremor-dropdown":
-        "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
-    },
   },
-  safelist: [
-    {
-      pattern:
-        /^(bg-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
-      variants: ["hover", "ui-selected"],
-    },
-    {
-      pattern:
-        /^(text-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
-      variants: ["hover", "ui-selected"],
-    },
-    {
-      pattern:
-        /^(border-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
-      variants: ["hover", "ui-selected"],
-    },
-    {
-      pattern:
-        /^(ring-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
-    },
-    {
-      pattern:
-        /^(stroke-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
-    },
-    {
-      pattern:
-        /^(fill-(?:slate|gray|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)-(?:50|100|200|300|400|500|600|700|800|900|950))$/,
-    },
-  ],
   plugins: [
-    require("tailwindcss-animate"),
-    require("@tailwindcss/forms"),
-    require("@tailwindcss/typography"),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('tailwind-scrollbar-hide'),
   ],
-} satisfies Config;
-
+};
+ 
 export default config;

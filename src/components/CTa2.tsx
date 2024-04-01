@@ -2,54 +2,41 @@
 
 export default function CTANew() {
     return (
-      <div className="bg-white">
-        <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
-          <div className="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
-            <svg
-              viewBox="0 0 1024 1024"
-              className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
-              aria-hidden="true"
+      <section>
+      <div
+        className="items-center w-full mx-auto 2xl:max-w-7xl bg-black p-8 lg:p-20 2xl:px-0 2xl:border-x-2 border-black"
+      >
+        <div className="items-center gap-12 h-full">
+          <div className="text-center max-w-3xl mx-auto">
+            <img
+              className="mx-auto justify-center w-32 h-32 shadow shadow-white rounded-full"
+    
+              src="/images/blob1.svg"
+              alt=""
+            />
+    
+            <p
+              className="text-3xl lg:text-5xl mt-8 tracking-tight font-medium text-white"
             >
-              <circle cx={512} cy={512} r={512} fill="url(#759c1415-0410-454c-8f7c-9a820de03641)" fillOpacity="0.7" />
-              <defs>
-                <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
-                  <stop stopColor="#7775D6" />
-                  <stop offset={1} stopColor="#E935C1" />
-                </radialGradient>
-              </defs>
-            </svg>
-            <div className="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
-              <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Launch your SAAS today!
-                <br />
-              </h2>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                Don't waste time building your SaaS from scratch. Start with our template and launch your business today.
-              </p>
-              <div className="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
-                <a
-                  href="https://nextjs-boilerplate-magna.lemonsqueezy.com/checkout/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
-                  className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                >
-                  Get started
-                </a>
-                {/* <a href="#" className="text-sm font-semibold leading-6 text-white">
-                  Learn more <span aria-hidden="true">→</span>
-                </a> */}
-              </div>
-            </div>
-            <div className="relative mt-16 h-80 lg:mt-8">
-              <img
-                className="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
-                src="/dashboard.png"
-                alt="App screenshot"
-                width={1824}
-                height={1080}
-              />
+              Ready to dive in? <span className="md:block lg:text-lila-600"
+                >Join flabbergasted today!</span
+              >
+            </p>
+            <p className="max-w-lg mx-auto mt-4 lg:text-xl tracking-wide text-white">
+              Explore the limitless possibilities of digital finance and embark on a
+              journey towards financial empowerment
+            </p>
+            <div className="mt-12">
+              <a
+                className="text-black items-center shadow shadow-lila-600 text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-lila-300 focus:bg-lila-600 border-lila-600 duration-300 outline-none focus:shadow-none border-2 sm:w-auto py-3 rounded-lg h-16 tracking-wide focus:translate-y-1 w-full hover:bg-lila-500"
+                href="/">Explore all pages <span className="ml-3">&rarr;</span></a
+              >
             </div>
           </div>
         </div>
       </div>
+    </section>
+    
     )
   }
   

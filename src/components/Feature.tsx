@@ -23,38 +23,56 @@ const features = [
 
 export default function Features1() {
   return (
-    <div className="overflow-hidden bg-white py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-          <div className="lg:pr-8 lg:pt-4">
-            <div className="lg:max-w-lg">
-              <h2 className="text-base font-semibold leading-7 text-indigo-600">Launch faster</h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"></p>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
-                A ready made template for your SaaS product that doesn't break the bank.
-              </p>
-              <dl className="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
-                {features.map((feature) => (
-                  <div key={feature.name} className="relative pl-9">
-                    <dt className="inline font-semibold text-gray-900">
-                      <feature.icon className="absolute left-1 top-1 h-5 w-5 text-indigo-600" aria-hidden="true" />
-                      {feature.name}
-                    </dt>{' '}
-                    <dd className="inline">{feature.description}</dd>
-                  </div>
-                ))}
-              </dl>
-            </div>
+    <section className="relative flex items-center w-full">
+    <div
+      className="relative items-center w-full mx-auto 2xl:max-w-7xl 2xl:border-x-2 border-b-2 border-black"
+    >
+      <div className="relative p-8 lg:p-20 items-center gap-12 h-full bg-yellow-500">
+        <div className="text-center max-w-4xl mx-auto">
+          <p className="text-3xl lg:text-5xl font-medium text-black">
+            Navigating the <span className="md:block">digital financial frontier</span
+            >
+          </p>
+          <p className="xl:text-xl text-black tracking-wide max-w-xl mx-auto mt-4">
+            Join us on our journey to transform the financial landscape with
+            cutting-edge cryptocurrency solutions and groundbreaking blockchain
+            technologies.
+          </p>
+        </div>
+  
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:text-center lg:grid-cols-3 gap-6 lg:gap-12 mt-12"
+        >
+          <div>
+            <img className="w-20 h-20 mx-auto" src="/images/blob1.svg" alt="" />
+            <h2 className="text-3xl text-black font-medium mt-8">Secure Wallets</h2>
+            <p className="text-lg tracking-wide text-black mt-4">
+              Rest easy knowing your crypto assets are protected by
+              state-of-the-art security measures and encryption.
+            </p>
           </div>
-          <img
-            src="/settings.png"
-            alt="Product screenshot"
-            className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-            width={2432}
-            height={1442}
-          />
+          <div>
+            <img className="w-20 h-20 mx-auto" src="/images/blob2.svg" alt="" />
+            <h2 className="text-3xl text-black font-medium mt-8">Instant Transactions</h2>
+            <p className="text-lg tracking-wide text-black mt-4">
+              Experience the convenience of near-instantaneous cryptocurrency
+              transfers, allowing you to send .
+            </p>
+          </div>
+          <div>
+            <img className="w-20 h-20 mx-auto"       src="/images/blob3.svg" alt="" />
+            <h2 className="text-3xl text-black font-medium mt-8">
+              Multi-Currency Support
+            </h2>
+            <p className="text-lg tracking-wide text-black mt-4">
+              Access a diverse range of cryptocurrencies in one unified platform,
+              enabling you to explore.
+            </p>
+          </div>
         </div>
       </div>
     </div>
+  </section>
+  
   )
 }
