@@ -12,7 +12,7 @@ export default function Feature3({}: Props) {
     <div className="relative p-8 lg:p-20 items-center gap-12 h-full bg-yellow-500">
       <div className="text-center max-w-4xl mx-auto">
         <p className="text-4xl lg:text-5xl  font-medium text-black">
-          Navigating the digital financial frontier
+          Develop with the latest technology.
         </p>
       </div>
       <div className="relative items-center w-full mx-auto mt-12">
@@ -27,32 +27,30 @@ export default function Feature3({}: Props) {
       >
         <div>
           <h2 className="text-3xl  text-black font-medium">
-            Secure Wallets
+            Next-Auth
           </h2>
           <p className="text-lg tracking-wide text-black mt-4">
-            Rest easy knowing your crypto assets are protected by
-            state-of-the-art security measures and encryption, ensuring your
-            safety
+            Implement user authentication with Next-Auth, a flexible and easy-to-use
+            solution that supports various authentication providers.
           </p>
         </div>
         <div>
           <h2 className="text-3xl  text-black font-medium">
-            Instant Transactions
+            Tailwind CSS
           </h2>
           <p className="text-lg tracking-wide text-black mt-4">
-            Experience the convenience of near-instantaneous cryptocurrency
-            transfers, allowing you to send and receive digital assets in
-            real-time, eliminating delays.
+            Utilize Tailwind CSS to create custom designs and responsive layouts
+            with minimal effort, enabling you to build visually appealing
+            interfaces.
           </p>
         </div>
         <div>
           <h2 className="text-3xl  text-black font-medium">
-            Multi-Currency Support
+            Prisma ORM
           </h2>
           <p className="text-lg tracking-wide text-black mt-4">
-            Access a diverse range of cryptocurrencies in one unified platform,
-            enabling you to explore and manage various digital assets
-            effortlessly.
+            Leverage Prisma ORM to interact with your database, enabling you to
+            easily query, update, and manage your data with a type-safe API.
           </p>
         </div>
       </div>

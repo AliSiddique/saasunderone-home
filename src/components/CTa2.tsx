@@ -18,18 +18,18 @@ export default function CTANew() {
             <p
               className="text-3xl lg:text-5xl mt-8 tracking-tight font-medium text-white"
             >
-              Ready to dive in? <span className="md:block lg:text-lila-600"
-                >Join flabbergasted today!</span
+              Ready to start your business? <span className="md:block lg:text-lila-600"
+                >Join now!</span
               >
             </p>
             <p className="max-w-lg mx-auto mt-4 lg:text-xl tracking-wide text-white">
-              Explore the limitless possibilities of digital finance and embark on a
-              journey towards financial empowerment
+              Start making money with your business today. Our templates come with
+              everything you need to get started.
             </p>
             <div className="mt-12">
               <a
                 className="text-black items-center shadow shadow-lila-600 text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-lila-300 focus:bg-lila-600 border-lila-600 duration-300 outline-none focus:shadow-none border-2 sm:w-auto py-3 rounded-lg h-16 tracking-wide focus:translate-y-1 w-full hover:bg-lila-500"
-                href="/">Explore all pages <span className="ml-3">&rarr;</span></a
+                href="/">Buy <span className="ml-3">&rarr;</span></a
               >
             </div>
           </div>

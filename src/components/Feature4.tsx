@@ -15,10 +15,10 @@ export default function Feature4({}: Props) {
           className="relative p-8 lg:px-20 py-12  items-center gap-12 h-full lg:inline-flex bg-white">
           <div className="max-w-xl text-center mx-auto">
             <p className="text-3xl lg:text-5xl 2xl:text-4xl tracking-tight font-medium text-black       ">
-              Multi-currency support
+             Email templates
             </p>
             <p className=" mt-4 text-lg tracking-wide text-black  font-normal mx-auto">
-              Access a diverse range of cryptocurrencies in one unified platform, enabling you to explore and manage various digital assets.
+              Send beautiful emails to your users with our pre-built templates. Customize them to match your brand and get started quickly.
             </p>
 
           </div>
@@ -36,10 +36,10 @@ export default function Feature4({}: Props) {
           className="relative p-8 lg:px-20 py-12  items-center gap-12 h-full lg:inline-flex bg-white">
           <div className="max-w-xl text-center mx-auto">
             <p className="text-3xl lg:text-5xl 2xl:text-4xl tracking-tight font-medium text-black       ">
-              Decentralized exchanges
+              Email Marketing
             </p>
             <p className=" mt-4 text-lg tracking-wide text-black  font-normal mx-auto">
-              Embrace peer-to-peer trading without intermediaries. Trade directly with other users on our platform and enjoying the benefits.
+              Send emails to your users quickly and easily. We handle the integration for you.
             </p>
 
           </div>

@@ -8,6 +8,9 @@ import { ThemeProvider } from "@/components/Theme-Provider";
 import { config } from "../../config";
 import Head from "next/head";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import MadeWith from "@/components/MadeWith";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,7 +48,11 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
+                      <Navbar />
+
             {children}
+            <Footer />
+            <MadeWith />
           </ThemeProvider>
         </SessionProviderContext>
       </body>

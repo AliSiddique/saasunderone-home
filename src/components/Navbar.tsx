@@ -24,7 +24,7 @@ export default function Navbar() {
       <a
         className="items-center font-bold gap-3 inline-flex text-lg tracking-tighter md:hidden"
         href="/"
-        ><span>FLABBERGASTED.</span>
+        ><span>Saasunderone.</span>
       </a>
       <button
         className="focus:outline-none focus:shadow-outline md:hidden ml-auto border-2 border-black bg-red-500"
@@ -53,16 +53,16 @@ export default function Navbar() {
       <a
         className="duration-300 ease-in-out focus:outline-none focus:shadow-none focus:text-orange/90 hover:text-lila-900 md:my-0 px-4 py-2 transform transition md:ml-8 lg:ml-16 2xl:ml-0"
         href="/"
-        >Overview
+        >Docs
       </a>
 
 
       <a
         className="duration-300 ease-in-out focus:outline-none focus:shadow-none focus:text-orange/90 hover:text-lila-900 md:my-0 px-4 py-2 transform transition"
-        href="/components/overview"
-        >Components
+        href="/templates"
+        >Templates
       </a>
-      <div className="relative" x-data="{ open: false }">
+      {/* <div className="relative" x-data="{ open: false }">
         <button
           className="duration-300 ease-in-out focus:outline-none focus:shadow-none focus:text-orange/90 hover:text-lila-900 md:my-0 px-4 py-2 transform transition inline-flex items-center gap-3"
           ><span>Style Guide</span><svg
@@ -75,37 +75,21 @@ export default function Navbar() {
             stroke-linecap="round"
             stroke-linejoin="round"
             ><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path
-              d="M6 9l6 6l6 -6"></path></svg
-          ></button
-        ><div
+              d="M6 9l6 6l6 -6"></path></svg></button><div
          
           className="absolute right-0 z-10 w-auto mt-2 origin-top-right rounded-lg bg-white ring-2 ring-black focus:outline-none"
           role="menu"
           aria-orientation="vertical"
           aria-labelledby="menu-button"
         >
-          <div className="py-1 bg-white rounded-xl" role="none">
-            <a
-              href="/components/typography"
-              className="block text-left px-4 py-2 text-sm text-black hover:text-lila-800 w-full"
-              role="menuitem"
-              id="menu-item-0"
-              >Typography
-            </a>
-            <a
-              href="/components/colors"
-              className="block text-left px-4 py-2 text-sm text-black hover:text-lila-800 w-full"
-              role="menuitem"
-              id="menu-item-2">Components</a
-            >
-          </div>
+
         </div>
-      </div>
+      </div> */}
 
       <a
         className="text-white md:ml-auto bg-black border-l-2 border-black duration-500 ease-in-out focus:outline-none ring-inset ring-offset-black focus:ring-2 focus:ring-black focus:ring-offset-2 h-12 lg:h-20 hover:bg-white hover:text-black inline-flex tracking-wide items-center justify-center px-6 text-center transform transition py-2 md:py-4"
         href="https://lexingtonthemes.lemonsqueezy.com/checkout/buy/645ac44b-ee66-4368-bb58-be869569fb88"
-        ><span>Buy Flabbergasted</span>
+        ><span>Buy</span>
       </a>
     </nav>
   </div>

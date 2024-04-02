@@ -33,7 +33,6 @@ export const metadata = {
 export default function page() {
   return (
     <div>
-          <Navbar/>
 
       <Hero/>
       <Features1/>
@@ -45,7 +44,6 @@ export default function page() {
       <Pricing/>
       {/* <FAQ/> */}
       <CTANew/>
-      <Footer/>
     </div>
   )
 }

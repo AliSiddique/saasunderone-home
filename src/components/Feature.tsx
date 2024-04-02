@@ -30,13 +30,12 @@ export default function Features1() {
       <div className="relative p-8 lg:p-20 items-center gap-12 h-full bg-yellow-500">
         <div className="text-center max-w-4xl mx-auto">
           <p className="text-3xl lg:text-5xl font-medium text-black">
-            Navigating the <span className="md:block">digital financial frontier</span
+            Get everything you need <span className="md:block">in one template</span
             >
           </p>
           <p className="xl:text-xl text-black tracking-wide max-w-xl mx-auto mt-4">
-            Join us on our journey to transform the financial landscape with
-            cutting-edge cryptocurrency solutions and groundbreaking blockchain
-            technologies.
+            Our templates come with everything you need to get your startup off the
+            ground. From authentication to payments, we've got you covered.
           </p>
         </div>
   
@@ -45,28 +44,28 @@ export default function Features1() {
         >
           <div>
             <img className="w-20 h-20 mx-auto" src="/images/blob1.svg" alt="" />
-            <h2 className="text-3xl text-black font-medium mt-8">Secure Wallets</h2>
+            <h2 className="text-3xl text-black font-medium mt-8">Authentication</h2>
             <p className="text-lg tracking-wide text-black mt-4">
-              Rest easy knowing your crypto assets are protected by
-              state-of-the-art security measures and encryption.
+              Magic Link, OAuth, and passwordless. All the tools you need to onboard
+              your users quickly.
             </p>
           </div>
           <div>
             <img className="w-20 h-20 mx-auto" src="/images/blob2.svg" alt="" />
-            <h2 className="text-3xl text-black font-medium mt-8">Instant Transactions</h2>
+            <h2 className="text-3xl text-black font-medium mt-8">Payment</h2>
             <p className="text-lg tracking-wide text-black mt-4">
-              Experience the convenience of near-instantaneous cryptocurrency
-              transfers, allowing you to send .
+              Get paid quickly and easily with Stripe. We handle the integration for
+              you.
             </p>
           </div>
           <div>
             <img className="w-20 h-20 mx-auto"       src="/images/blob3.svg" alt="" />
             <h2 className="text-3xl text-black font-medium mt-8">
-              Multi-Currency Support
+              Email Marketing
             </h2>
             <p className="text-lg tracking-wide text-black mt-4">
-              Access a diverse range of cryptocurrencies in one unified platform,
-              enabling you to explore.
+              Send emails to your users quickly and easily. We handle the
+              integration for you.
             </p>
           </div>
         </div>

@@ -38,14 +38,12 @@ export default function Hero() {
       <div className="text-center mx-auto p-8 lg:p-20 lg:py-48 relative">
         <div className="mx-auto">
           <h2 className="text-3xl lg:text-5xl font-medium text-black">
-            Pioneering the future of <span className="md:block"
-              >decentralized finance
+            Launch your startup <span className="pt-2 md:block"
+              >in <span className='bg-black p-2 rounded-lg text-lila-500'>days</span>, not months.
             </span>
           </h2>
           <p className="xl:text-xl text-black tracking-wide max-w-xl mx-auto mt-4">
-            Join us on our journey to transform the financial landscape with
-            cutting-edge cryptocurrency solutions and groundbreaking blockchain
-            technologies.
+           Next.JS Templates and Boilerplates for SaaS, Startups, and Indie Hackers.
           </p>
         </div>
         <div className=" flex mt-10 justify-center">
@@ -53,7 +51,7 @@ export default function Hero() {
           <a
             className="text-black items-center shadow shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white sm:w-auto py-3 rounded-lg h-16 focus:translate-y-1 w-full hover:text-lila-800 tracing-wide"
             href="/"
-            >Explore all pages
+            >Buy Now
           </a>
         </div>
       </div>
