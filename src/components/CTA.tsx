@@ -7,16 +7,16 @@ export default function CTAHome() {
         <div
         className="relative flex items-center gap-4 py-12 animate-marqueeLeft whitespace-nowrap"
       >
-        <img src="/brands/1.svg" alt="logo" />
-        <img src="/brands/2.svg" alt="logo" />
-        <img src="/brands/3.svg" alt="logo" />
-        <img src="/brands/4.svg" alt="logo" />
-        <img src="/brands/5.svg" alt="logo" />
-        <img src="/brands/6.svg" alt="logo" />
-         <img src="/brands/7.svg" alt="logo" />
-        <img src="/brands/8.svg" alt="logo" />
-        <img src="/brands/9.svg" alt="logo" />
-        <img src="/brands/10.svg" alt="logo" />
+        <img src="/integrations/clerk.svg" alt="logo" className="h-10 w-full rounded-full" />
+        <img src="/integrations/stripe.svg" alt="logo" className="h-10 w-full rounded-full" />
+        <img src="/integrations/openai.jpeg" alt="logo"  className="h-10 w-full rounded-full"/>
+        <img src="/integrations/turbo.jpeg" alt="logo"  className="h-10 w-full rounded-full" />
+        <img src="/integrations/mdx-logo.jpeg" alt="logo"  className="h-10 w-full rounded-full" />
+        <img src="/integrations/nextauth.png" alt="logo"  className="h-10 w-full rounded-full" />
+        <img src="/integrations/shadcn.png" alt="logo"  className="h-10 w-full rounded-full" />
+        <img src="/integrations/prisma-logo.png" alt="logo"  className="h-10 w-full rounded-full" />
+        <img src="/integrations/reactemail-logo.jpeg" alt="logo"  className="h-10 w-full rounded-full" />
+        <img src="/integrations/supabase-logo.png" alt="logo"  className="h-10 w-full rounded-full" />
         <img src="/brands/11.svg" alt="logo" />
         <img src="/brands/12.svg" alt="logo" />
       </div>

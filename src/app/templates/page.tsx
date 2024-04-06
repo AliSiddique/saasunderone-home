@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
@@ -8,12 +9,11 @@ export default function page({}: Props) {
         <section>
   <div className="p-8 lg:p-20 border-b-2 border-black 2xl:max-w-7xl mx-auto 2xl:border-x-2">
     <p className="text-5xl lg:text-7xl text-black">
-      How to unlock your trading limit
+      Templates to start your own business today!
     </p>
     <p className="mt-4 xl:text-xl tracking-widetext-black">
-      Flabbergasted connects securely with popular billing managers, banking
-      partners, and accounting platforms so you can seamlessly manage your
-      account and get access to non-dilutive capital.
+      Choose between our templates and get started with your business today.
+      Add your own touch and make it your own.
     </p>
   </div>
   <dl
@@ -24,13 +24,13 @@ export default function page({}: Props) {
     >
       <div className="p-8">
         <dt className="flex gap-3">
-          <img className="shrink-0" src="/integrations/stripe.svg" alt="" />
+          <img className="shrink-0 h-10 w-10 rounded-full" src="/integrations/jobboard-logo.webp" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            Stripe
+            Job Board
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          A payment processing platform for online businesses.
+          A job board template.
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">
@@ -54,8 +54,8 @@ export default function page({}: Props) {
           className="items-center inline-flex p-4 bg-white"
           x-data="{ value: false }"
         >
-          <button
-            x-ref="toggle"
+          <Link
+          href={"https://jobs.saasunderone.com"}
             type="button"
             role="switch"
 
@@ -64,7 +64,8 @@ export default function page({}: Props) {
             aria-labelledby="toggle-label-1"
             ><span
               className="bg-black h-2 w-2 rounded-full transition shadow-md translate-x-1"
-              aria-hidden="true"></span></button>
+              aria-hidden="true"></span>
+              </Link>
         </div>
       </div>
     </div>
@@ -75,11 +76,11 @@ export default function page({}: Props) {
         <dt className="flex gap-3">
           <img className="shrink-0" src="/integrations/shopify.svg" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            Shopify
+            AI Template
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          An e-commerce platform for online stores.
+          An AI template for your business.
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">
@@ -121,13 +122,13 @@ export default function page({}: Props) {
     >
       <div className="p-8">
         <dt className="flex gap-3">
-          <img className="shrink-0" src="/integrations/paypal.svg" alt="" />
+          <img className="shrink-0 h-10 w-10 rounded-full" src="/integrations/directory-logo.webp" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            PayPal
+            Directory Template
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          An online payment system for sending and receiving money.
+          A directory template for your business.
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">
@@ -171,13 +172,13 @@ export default function page({}: Props) {
     >
       <div className="p-8">
         <dt className="flex gap-3">
-          <img className="shrink-0" src="/integrations/yandex_kassa.svg" alt="" />
+          <img className="shrink-0 h-10 w-10 rounded-full" src="/integrations/turbo-logo.svg" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            Yandex Kassa
+           Enterprise Template
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          A payment gateway service for online transactions in Russia.
+          An enterprise template for your business using Turbo Repo.
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">
@@ -223,11 +224,11 @@ export default function page({}: Props) {
         <dt className="flex gap-3">
           <img className="shrink-0" src="/integrations/alfa_bank.svg" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            Alfa Bank
+            Component Template
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          A commercial bank in Russia offering financial services and so on.
+          A component template for your business.
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">
@@ -273,11 +274,11 @@ export default function page({}: Props) {
         <dt className="flex gap-3">
           <img className="shrink-0" src="/integrations/mastercard.svg" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            MasterCard
+            Image Generator
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          A global payment technology company providing financial services
+          Image generator for your business.
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">

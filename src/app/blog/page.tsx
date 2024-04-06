@@ -11,7 +11,9 @@ export default async function page({}: Props) {
 
   return (
     <div>
-      <Navbar />
+      <iframe src="https://docs.saasunderone.com/" width="100%" height="1000" style={{border:0}} loading="lazy"></iframe>
+
+      {/* <Navbar />
       <div className="-m-4 flex flex-wrap mx-auto max-w-7xl py-5">
         {posts.map((blog: any) => (
           <div key={blog.meta.slug} className="p-4 md:w-1/3">
@@ -51,7 +53,7 @@ export default async function page({}: Props) {
           </div>
         ))}
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
