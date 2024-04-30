@@ -36,7 +36,6 @@ export default function CTANew() {
         </div>
       </div>
     </section>
-    
     )
   }
   

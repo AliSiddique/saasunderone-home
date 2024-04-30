@@ -1,8 +1,14 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  params: {
+    slug: string
+  }
+}
 
-export default function page({}: Props) {
+export default function page({params}: Props) {
+  const slug = params.slug
+  console.log(slug)
   return (
     <div>
         <section

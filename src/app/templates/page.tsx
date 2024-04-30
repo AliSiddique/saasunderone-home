@@ -2,6 +2,45 @@ import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
+export const Templates = [
+    {
+      title: "Job Board",
+      description: "A job board template.",
+      image: "/integrations/jobboard-logo.webp",
+      link: "/templates/jobboard",
+    },
+    {
+      title: "AI Template",
+      description: "An AI template for your business.",
+      image: "/integrations/openai.jpeg",
+      link: "/templates/ai",
+    },
+    {
+      title: "Directory Template",
+      description: "A directory template for your business.",
+      image: "/integrations/directory-logo.webp",
+      link: "/templates/directory",
+    },
+    {
+      title:"Enterprise Template",
+      description:"An enterprise template for your business.",
+      image:"/integrations/turbo-logo.svg",
+      link:"/templates/enterprise",
+    },
+    {
+      title:"Next Auth Template",
+      description:"An authentication template for your business.",
+      image:"/integrations/nextauth.png",
+      link:"/templates/nextauth",
+    },
+    {
+      title:"Clerk Template",
+      description:"A clerk template for your business.",
+      image:"/integrations/clerk.svg",
+      link:"/templates/clerk",
+    }
+  
+]
 
 export default function page({}: Props) {
   return (
@@ -19,7 +58,7 @@ export default function page({}: Props) {
   <dl
     className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-3 p-8 lg:p-20 2xl:max-w-7xl mx-auto border-black 2xl:border-x-2"
   >
-    <div
+    {/* <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
       <div className="p-8">
@@ -52,10 +91,10 @@ export default function page({}: Props) {
         </a>
         <div
           className="items-center inline-flex p-4 bg-white"
-          x-data="{ value: false }"
+         
         >
           <Link
-          href={"https://jobs.saasunderone.com"}
+          href={"https://jobs.saasunderone.com/"}
             type="button"
             role="switch"
 
@@ -68,13 +107,13 @@ export default function page({}: Props) {
               </Link>
         </div>
       </div>
-    </div>
-    <div
+    </div> */}
+    {/* <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
       <div className="p-8">
         <dt className="flex gap-3">
-          <img className="shrink-0" src="/integrations/shopify.svg" alt="" />
+          <img className="shrink-0 h-10 w-10" src="/integrations/openai.jpeg" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
             AI Template
           </p>
@@ -116,8 +155,8 @@ export default function page({}: Props) {
           >
         </div>
       </div>
-    </div>
-    <div
+    </div> */}
+    {/* <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
       <div className="p-8">
@@ -166,8 +205,8 @@ export default function page({}: Props) {
           >
         </div>
       </div>
-    </div>
-    <div
+    </div> */}
+    {/* <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
       <div className="p-8">
@@ -216,15 +255,15 @@ export default function page({}: Props) {
           >
         </div>
       </div>
-    </div>
-    <div
+    </div> */}
+    {/* <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
       <div className="p-8">
         <dt className="flex gap-3">
-          <img className="shrink-0" src="/integrations/alfa_bank.svg" alt="" />
+          <img className="shrink-0 h-10 w-10" src="/integrations/nextauth.png" alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            Component Template
+            Next Auth Template
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
@@ -266,24 +305,25 @@ export default function page({}: Props) {
           >
         </div>
       </div>
-    </div>
+    </div> */}
+    {Templates.map((template:any) => (
     <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
       <div className="p-8">
         <dt className="flex gap-3">
-          <img className="shrink-0" src="/integrations/mastercard.svg" alt="" />
+          <img className="shrink-0 h-10 w-10" src={template.image} alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            Image Generator
+            {template.title}
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          Image generator for your business.
+          {template.description}
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">
         <a
-          href="/integrations/integrations-details"
+          href={template.link}
           className="text-black items-center shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 duration-100 focus:bg-black focus:text-white py-3 h-16 tracking-wide w-full hover:text-lila-800 gap-3 justify-between"
         >
           Learn more
@@ -317,6 +357,7 @@ export default function page({}: Props) {
         </div>
       </div>
     </div>
+    ))}
   </dl>
 </section>
 
