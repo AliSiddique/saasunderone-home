@@ -1,9 +1,8 @@
 {
-  "name": "saasunderone",
-  "version": "0.1.0",
+  "name": "saasundasdasadserone-asdads",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001",
+    "dev": "npx prisma generate && next dev",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write ."
