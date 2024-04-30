@@ -39,13 +39,13 @@ export default function RootLayout({
       <Head>
         <GoogleAnalytics GA_TRACKING_ID={config.googleAnalyticsId} />
       </Head>
-      <body className={inter.className}>
+      <body className={inter.className + " bg-white"}>
         <Toaster position="top-right" />
         <SessionProviderContext>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
-            enableSystem
+            defaultTheme="light"
+            
             disableTransitionOnChange
           >
                       <Navbar />

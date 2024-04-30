@@ -1,4 +1,5 @@
 import React from 'react'
+import { Templates } from '../page'
 
 type Props = {
   params: {
@@ -8,7 +9,8 @@ type Props = {
 
 export default function page({params}: Props) {
   const slug = params.slug
-  console.log(slug)
+ const template = Templates.filter((template) => template.slug === slug)[0]
+ console.log(template)
   return (
     <div>
         <section
@@ -25,14 +27,13 @@ export default function page({params}: Props) {
           <div className="flex gap-4 items-center">
             <img
               className="w-8 h-8 "
-              src="/integrations/stripe.svg"
+              src={template.image}
               alt=""
             />
-            <p className="text-xl lg:text-2xl font-medium text-black">Stripe</p>
+            <p className="text-xl lg:text-2xl font-medium text-black">{template.title}</p>
           </div>
           <p className="mt-4 text-sm  max-w-xl tracking-wide text-black">
-            Stripe is a digital music service that gives you access to
-            millions of songs.
+            {template.description}
           </p>
           <div className="mt-8">
             <a
@@ -55,7 +56,7 @@ export default function page({params}: Props) {
           <p>Website</p>
           <p>
             <a className="hover:text-black text-lila-800" href="#"
-              >Lexingtonthemes.com</a
+              >{template.link}</a
             >
           </p>
         </li>
