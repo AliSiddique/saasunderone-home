@@ -1,5 +1,5 @@
+import { Templates } from '@/lib/Templates'
 import React from 'react'
-import { Templates } from '../page'
 
 type Props = {
   params: {
