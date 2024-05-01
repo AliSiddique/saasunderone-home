@@ -44,23 +44,24 @@ export default function page({}: Props) {
   <dl
     className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-3 p-8 lg:p-20 2xl:max-w-7xl mx-auto border-black 2xl:border-x-2"
   >
+    {templates.map((template) => (
     <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
       <div className="p-8">
         <dt className="flex gap-3">
-          <img className="shrink-0" src="/integrations/stripe.svg" alt="" />
+          <img className="shrink-0" src={template.image} alt="" />
           <p className="text-black font-medium text-lg leading-6 lg:text-2xl">
-            Stripe
+            {template.name}
           </p>
         </dt>
         <dd className="mt-4 text-lg tracking-wide text-black">
-          A payment processing platform for online businesses.
+          {template.description}
         </dd>
       </div>
       <div className="flex divide-x-2 divide-black">
         <a
-          href="/integrations/integrations-details"
+          href={template.url}
           className="text-black items-center shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 duration-100 focus:bg-black focus:text-white py-3 h-16 tracking-wide w-full hover:text-lila-800 gap-3 justify-between"
         >
           Learn more
@@ -93,6 +94,7 @@ export default function page({}: Props) {
         </div>
       </div>
     </div>
+    ))}
     <div
       className="divide-y-2 divide-black border-2 border-black rounded-2xl overflow-hidden shadow-large h-full justify-between flex flex-col"
     >
