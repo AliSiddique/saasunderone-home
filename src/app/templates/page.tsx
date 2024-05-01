@@ -40,12 +40,10 @@ export default function page({}: Props) {
         <section>
   <div className="p-8 lg:p-20 border-b-2 border-black 2xl:max-w-7xl mx-auto 2xl:border-x-2">
     <p className="text-5xl lg:text-7xl text-black">
-      How to unlock your trading limit
+      Explore our templates
     </p>
     <p className="mt-4 xl:text-xl tracking-widetext-black">
-      Flabbergasted connects securely with popular billing managers, banking
-      partners, and accounting platforms so you can seamlessly manage your
-      account and get access to non-dilutive capital.
+      Get started with our templates today. Our templates come with everything you need to get started.
     </p>
   </div>
   <dl

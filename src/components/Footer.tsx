@@ -116,7 +116,8 @@ import { config } from "../../config";
             </p>
             <div className="flex gap-4">
               <a
-                href="#_"
+                href="https://twitter.com/salinash_"
+                target="_blank"
                 className="flex h-10 w-10 items-center justify-center hover:shadow-none hover:border-white border-2 border-black shadow-tiny duration-300 shadow-white hover:translate-x-1 hover:translate-y-1 rounded-full bg-white focus:bg-black focus:text-white"
               >
                 <div      >
@@ -136,7 +137,7 @@ import { config } from "../../config";
                   </svg>
                 </div>
               </a>
-              <a
+              {/* <a
                 href="#_"
                 className="flex h-10 w-10 items-center justify-center hover:shadow-none hover:border-white border-2 border-black shadow-tiny duration-300 shadow-white hover:translate-x-1 hover:translate-y-1 rounded-full bg-white focus:bg-black focus:text-white"
               >
@@ -161,8 +162,8 @@ import { config } from "../../config";
                     <path d="M13 18l0 3"></path>
                   </svg>
                 </div>
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 href="#_"
                 className="flex h-10 w-10 items-center justify-center hover:shadow-none hover:border-white border-2 border-black shadow-tiny duration-300 shadow-white hover:translate-x-1 hover:translate-y-1 rounded-full bg-white focus:bg-black focus:text-white"
               >
@@ -186,7 +187,7 @@ import { config } from "../../config";
                       fill="currentColor"></path>
                   </svg>
                 </div>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

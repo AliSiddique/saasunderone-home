@@ -1,4 +1,5 @@
 "use client"
+import ComingSoon from '@/components/ComingSoon'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import React from 'react'
 
@@ -19,7 +20,9 @@ export default function page({params}: Props) {
             url:"/templates/nextauth",
             link:"https://www.google.com",
             screenshot:"/templates/nextauth-ss.png",
-            docs:"https://www.google.com"
+            docs:"https://docs.saasunderone.com",
+            coming_soon:false,
+            buy_link:"https://nextjs-boilerplate-magna.lemonsqueezy.com/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
         },
         {
             name:"Job Board",
@@ -29,7 +32,9 @@ export default function page({params}: Props) {
             url:"/templates/job-board",
             link:"https://www.google.com",
             screenshot:"/images/templates/job-board.png",
-            docs:"https://www.google.com"
+            docs:"https://docs.saasunderone.com",
+            coming_soon:true,
+            buy_link:"https://www.google.com"
         },
         {
             name:"AI Startup",
@@ -39,7 +44,9 @@ export default function page({params}: Props) {
             url:"/templates/ai-startup",
             link:"https://www.google.com",
             screenshot:"/images/templates/ai-startup.png",
-            docs:"https://www.google.com"
+            docs:"https://docs.saasunderone.com",
+            coming_soon:true,
+            buy_link:"https://www.google.com"
         },
         {
             name:"Clerk SAAS",
@@ -49,7 +56,9 @@ export default function page({params}: Props) {
             url:"/templates/clerk-saas",
             link:"https://www.google.com",
             screenshot:"/images/templates/clerk-saas.png",
-            docs:"https://www.google.com"
+            docs:"https://docs.saasunderone.com",
+            coming_soon:true,
+            buy_link:"https://www.google.com"
         }, {
             name:"Enterprise",
             description:"A template for Enterprise",
@@ -58,7 +67,9 @@ export default function page({params}: Props) {
             url:"/templates/enterprise",
             link:"https://www.google.com",
             screenshot:"/images/templates/enterprise.png",
-            docs:"https://www.google.com"
+            docs:"https://docs.saasunderone.com",
+            coming_soon:true,
+            buy_link:"https://www.google.com"
         }
         
     ]
@@ -78,6 +89,10 @@ export default function page({params}: Props) {
     }
   return (
     <div>
+        {matchedTemplate?.coming_soon && <ComingSoon />}
+        {!matchedTemplate?.coming_soon && (
+
+     
         <section
   className=" border-t-0 border-b-2 border-black 2xl:max-w-7xl mx-auto"
 >
@@ -102,7 +117,7 @@ export default function page({params}: Props) {
           </p>
           <div className="mt-8">
             <a
-              href="#"
+              href={matchedTemplate?.buy_link}
               className="text-black items-center shadow shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white py-3 rounded-lg h-16 tracking-wide focus:translate-y-1 w-full hover:text-lila-800"
               >Buy
             </a>
@@ -151,7 +166,7 @@ export default function page({params}: Props) {
 </div>
 
 </section>
-
+)}
     </div>
   )
 }

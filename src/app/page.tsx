@@ -39,7 +39,7 @@ export default function page() {
       <FeatureTwo/>
       <Feature3/>
       <Feature4/>
-      <Test1/>
+      {/* <Test1/> */}
       <Pricing/>
       {/* <FAQ/> */}
       <CTANew/>
