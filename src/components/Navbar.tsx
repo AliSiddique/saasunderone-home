@@ -52,7 +52,8 @@ export default function Navbar() {
     >
       <a
         className="duration-300 ease-in-out focus:outline-none focus:shadow-none focus:text-orange/90 hover:text-lila-900 md:my-0 px-4 py-2 transform transition md:ml-8 lg:ml-16 2xl:ml-0"
-        href="/"
+        href="https://docs.saasunderone.com"
+        target='_blank'
         >Docs
       </a>
 
@@ -88,7 +89,7 @@ export default function Navbar() {
 
       <a
         className="text-white md:ml-auto bg-black border-l-2 border-black duration-500 ease-in-out focus:outline-none ring-inset ring-offset-black focus:ring-2 focus:ring-black focus:ring-offset-2 h-12 lg:h-20 hover:bg-white hover:text-black inline-flex tracking-wide items-center justify-center px-6 text-center transform transition py-2 md:py-4"
-        href="https://lexingtonthemes.lemonsqueezy.com/checkout/buy/645ac44b-ee66-4368-bb58-be869569fb88"
+        href="https://nextjs-boilerplate-magna.lemonsqueezy.com/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
         ><span>Buy</span>
       </a>
     </nav>

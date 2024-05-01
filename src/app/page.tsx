@@ -36,7 +36,6 @@ export default function page() {
 
       <Hero/>
       <Features1/>
-      <CTAHome/>
       <FeatureTwo/>
       <Feature3/>
       <Feature4/>

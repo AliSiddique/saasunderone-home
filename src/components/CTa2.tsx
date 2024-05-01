@@ -29,7 +29,8 @@ export default function CTANew() {
             <div className="mt-12">
               <a
                 className="text-black items-center shadow shadow-lila-600 text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-lila-300 focus:bg-lila-600 border-lila-600 duration-300 outline-none focus:shadow-none border-2 sm:w-auto py-3 rounded-lg h-16 tracking-wide focus:translate-y-1 w-full hover:bg-lila-500"
-                href="/">Buy <span className="ml-3">&rarr;</span></a
+                href="https://nextjs-boilerplate-magna.lemonsqueezy.com/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
+                >Buy <span className="ml-3">&rarr;</span></a
               >
             </div>
           </div>

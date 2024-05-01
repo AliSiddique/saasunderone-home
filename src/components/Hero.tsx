@@ -9,28 +9,28 @@ export default function Hero() {
       className="mx-auto 2xl:max-w-7xl border-b-2 border-black 2xl:border-x-2 bg-lila-500 relative overflow-hidden"
     >
       <img
-        className="absolute shadow-large rounded-full shadow-black w-72 h-72 -top-20 -right-20"
+        className="hidden md:block absolute shadow-large rounded-full shadow-black w-72 h-72 -top-20 -right-20"
         src="/images/blob3.svg"
         alt=""
       />
   
       <img
-        className="absolute shadow-large rounded-full shadow-black w-72 h-72 -bottom-20 left-12"
+        className="hidden md:block absolute shadow-large rounded-full shadow-black w-72 h-72 -bottom-20 left-12"
         src="/images/blob4.svg"
         alt=""
       />
       <img
-        className="absolute w-96 shadow-large rounded-full shadow-black h-96 -bottom-32 -right-20"
+        className=" hidden md:block absolute w-96 shadow-large rounded-full shadow-black h-96 -bottom-32 -right-20"
         src="/images/blob1.svg"
         alt=""
       />
       <img
-        className="absolute shadow-large rounded-full shadow-black w-72 h-72 bottom-12 -left-20"
+        className="hidden md:block absolute shadow-large rounded-full shadow-black w-72 h-72 bottom-12 -left-20"
         src="/images/blob2.svg"
         alt=""
       />
       <img
-        className="absolute shadow-large rounded-full shadow-black w-72 h-72 -top-48 left-52 right-52"
+        className="hidden md:block absolute shadow-large rounded-full shadow-black w-72 h-72 -top-48 left-52 right-52"
         src="/images/blob5.svg"
         alt=""
       />
@@ -53,7 +53,13 @@ export default function Hero() {
             href="https://nextjs-boilerplate-magna.lemonsqueezy.com/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
             >Buy Now
           </a>
+          
         </div>
+        <h2 className="text-md lg:text-lg font-medium text-black pt-6 opacity-60">
+            Free<span className=""
+              > while in <span className='bg-black p-2 rounded-lg text-lila-500'>Beta</span>
+            </span>
+          </h2>
       </div>
     </div>
   </section>
