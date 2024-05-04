@@ -29,7 +29,7 @@ export default function Navbar() {
       </a>
       <Link
         href="https://saasunderone.lemonsqueezy.com/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
-        className="text-black items-center shadow ml-auto border-2 shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none  duration-100 focus:bg-black focus:text-white  py-3 rounded-lg h-16 focus:translate-y-1  hover:text-lila-800 tracing-wide"
+        className="text-black items-center md:hidden shadow ml-auto border-2 shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none  duration-100 focus:bg-black focus:text-white  py-3 rounded-lg h-16 focus:translate-y-1  hover:text-lila-800 tracing-wide"
 
         // className="focus:outline-none focus:shadow-outline md:hidden ml-auto border-2 border-black bg-red-500"
         >
