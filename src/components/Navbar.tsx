@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 const navigation = [
   { name: 'Pricing', href: '#pricing' },
@@ -26,26 +27,14 @@ export default function Navbar() {
         href="/"
         ><span>Saasunderone.</span>
       </a>
-      <button
-        className="focus:outline-none focus:shadow-outline md:hidden ml-auto border-2 border-black bg-red-500"
-        ><svg
-          className="h-8 w-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          ><path
-            className="inline-flex"
-            d="M4 6h16M4 12h16M4 18h16"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"></path><path
-            className="hidden"
-            d="M6 18L18 6M6 6l12 12"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"></path>
-        </svg>
-      </button>
+      <Link
+        href="https://saasunderone.lemonsqueezy.com/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
+        className="text-black items-center shadow ml-auto border-2 shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none  duration-100 focus:bg-black focus:text-white  py-3 rounded-lg h-16 focus:translate-y-1  hover:text-lila-800 tracing-wide"
+
+        // className="focus:outline-none focus:shadow-outline md:hidden ml-auto border-2 border-black bg-red-500"
+        >
+        Get Now
+      </Link>
     </div>
     <nav
       className="flex-col items-center flex-grow hidden md:flex text-black text-lg font-medium tracking-wide md:flex-row md:justify-start md:mt-0 lg:p-0 py-2 md:py-0 md:px-0 md:pb-0 px-5"

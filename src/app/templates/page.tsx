@@ -39,12 +39,22 @@ export default function page({}: Props) {
     <div>
         <section>
   <div className="p-8 lg:p-20 border-b-2 border-black 2xl:max-w-7xl mx-auto 2xl:border-x-2">
+
     <p className="text-5xl lg:text-7xl text-black">
       Explore our templates
     </p>
     <p className="mt-4 xl:text-xl tracking-widetext-black">
       Get started with our templates today. Our templates come with everything you need to get started.
     </p>
+    <div className=" flex mt-10 justify-center">
+  
+  <a
+    className="text-black items-center shadow shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white sm:w-auto py-3 rounded-lg h-16 focus:translate-y-1 w-full hover:text-lila-800 tracing-wide"
+    href="https://saasunderone.lemonsqueezy.com/buy/104a3200-7090-4ae6-8693-57ef3ea8ae5a"
+    >Early Access for all
+  </a>
+  
+</div>
   </div>
   <dl
     className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-6 lg:grid-cols-3 p-8 lg:p-20 2xl:max-w-7xl mx-auto border-black 2xl:border-x-2"

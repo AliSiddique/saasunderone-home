@@ -46,14 +46,18 @@ export default function Hero() {
            Next.JS Templates and Boilerplates for SaaS, Startups, and Indie Hackers.
           </p>
         </div>
-        <div className=" flex mt-10 justify-center">
+        <div className=" flex mt-10 justify-center gap-5">
   
           <a
             className="text-black items-center shadow shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white sm:w-auto py-3 rounded-lg h-16 focus:translate-y-1 w-full hover:text-lila-800 tracing-wide"
             href="https://nextjs-boilerplate-magna.lemonsqueezy.com/buy/db982dc5-06cf-4673-89f0-ae42cdf947e9"
-            >Buy Now
+            >Get Now
           </a>
-          
+          <a
+            className="text-black items-center shadow shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white sm:w-auto py-3 rounded-lg h-16 focus:translate-y-1 w-full hover:text-lila-800 tracing-wide"
+            href="https://saasunderone.lemonsqueezy.com/buy/104a3200-7090-4ae6-8693-57ef3ea8ae5a"
+            >Early Access to all
+          </a>
         </div>
         <h2 className="text-md lg:text-lg font-medium text-black pt-6 opacity-60">
             Free<span className=""
