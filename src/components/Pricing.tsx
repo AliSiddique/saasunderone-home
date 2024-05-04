@@ -1,6 +1,7 @@
 "use client"
 
 import { CheckIcon } from '@heroicons/react/20/solid'
+import Link from 'next/link'
 
 const includedFeatures = [
   'Free access for beta release',
@@ -127,7 +128,7 @@ export default function Pricing() {
           />
         </div>
         <div className="text-3xl mt-8">
-          $ <span x-text="annual ? '199/ year' : '45.00/ month'">299</span>
+          $ <span x-text="annual ? '199/ year' : '45.00/ month'">99</span>
         </div>
         <p className="lg:text-base text-sm tracking-wide mt-8">
           Take your crypto journey to the next level with our Pro plan, designed
@@ -183,9 +184,11 @@ export default function Pricing() {
           </p>
         </li>
       </ul>
-      <a
+      <Link
         className="text-black items-center shadow shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white sm:w-auto py-3 rounded-lg h-16 focus:translate-y-1 w-full hover:text-lila-800"
-        href="/templates">Get started</a
+        href="https://saasunderone.lemonsqueezy.com/buy/104a3200-7090-4ae6-8693-57ef3ea8ae5a"
+
+        >Get started</Link
       >
     </div>
   </div>
