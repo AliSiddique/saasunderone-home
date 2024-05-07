@@ -34,13 +34,13 @@ export default function page() {
   return (
     <div>
 
-      {/* <Hero/>
+      <Hero/>
       <Features1/>
       <FeatureTwo/>
       <Feature3/>
       <Feature4/>
       <Pricing/>
-      <CTANew/> */}
+      <CTANew/>
     </div>
   )
 }
