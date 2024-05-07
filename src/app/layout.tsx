@@ -11,6 +11,7 @@ import GoogleAnalytics from "@/components/GoogleAnalytics";
 import MadeWith from "@/components/MadeWith";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <GoogleAnalytics GA_TRACKING_ID={config.googleAnalyticsId} />
+        <Script src="https://salespopup.io/api/script.js?website=saasunderone.com" async defer/>
       </Head>
       <body className={inter.className + " bg-white"}>
         <Toaster position="top-right" />
