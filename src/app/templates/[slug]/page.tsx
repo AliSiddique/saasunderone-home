@@ -1,6 +1,7 @@
 "use client"
 import ComingSoon from '@/components/ComingSoon'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {
@@ -18,7 +19,7 @@ export default function page({params}: Props) {
             fullDescription:"A template for Next Auth",
             image:"/techs/nextauth.png",
             url:"/templates/nextauth",
-            link:"https://www.google.com",
+            link:"https://demo.saasunderone.com",
             screenshot:"/templates/nextauth-ss.png",
             docs:"https://docs.saasunderone.com",
             coming_soon:false,
@@ -30,11 +31,11 @@ export default function page({params}: Props) {
             fullDescription:"Job Board\n\nA job board template for Next.js",
             image:"/techs/jobboard-logo.webp",
             url:"/templates/job-board",
-            link:"https://www.google.com",
-            screenshot:"/images/templates/job-board.png",
+            link:"https://jobs.saasunderone.com",
+            screenshot:"/images/templates/job.png",
             docs:"https://docs.saasunderone.com",
-            coming_soon:true,
-            buy_link:"https://www.google.com"
+            coming_soon:false,
+            buy_link:"https://saasunderone.lemonsqueezy.com/buy/83b69ec9-f102-4e6a-9016-dc01c3a03f2e"
         },
         {
             name:"AI Startup",
@@ -116,11 +117,11 @@ export default function page({params}: Props) {
             {matchedTemplate?.description}
           </p>
           <div className="mt-8">
-            <a
-              href={matchedTemplate?.buy_link}
+            <Link
+              href={matchedTemplate?.buy_link || "/"}
               className="text-black items-center shadow shadow-black text-lg font-semibold inline-flex px-6 focus:outline-none justify-center text-center bg-white border-black ease-in-out transform transition-all focus:ring-lila-700 focus:shadow-none border-2 duration-100 focus:bg-black focus:text-white py-3 rounded-lg h-16 tracking-wide focus:translate-y-1 w-full hover:text-lila-800"
               >Buy
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -129,24 +130,21 @@ export default function page({params}: Props) {
         className="divide-y-2 text-black font-medium  grid-cols-2 grid lg:grid-cols-1 lg:text-left text-lg divide-black"
       >
         <li className="p-8">
-          <p>Buult by</p>
+          <p>Built by</p>
           <p>SaasUnderOne</p>
         </li>
         <li className="p-8">
           <p>Website</p>
           <p>
             <a className="hover:text-black text-lila-800" href="#"
-              >{matchedTemplate?.link}</a
-            >
+              >{matchedTemplate?.link}</a>
           </p>
         </li>
 
         <li className="p-8">
           <p>Docs</p>
           <p>
-            <a href={matchedTemplate?.docs} className="hover:text-black text-lila-800"
-              > Docs</a
-            >
+            <a href={matchedTemplate?.docs} className="hover:text-black text-lila-800"> Docs</a>
           </p>
         </li>
        

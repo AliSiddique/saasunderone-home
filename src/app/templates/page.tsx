@@ -104,8 +104,7 @@ export default function page({}: Props) {
             aria-labelledby="toggle-label-1"
             ><span
               className="bg-black h-2 w-2 rounded-full transition shadow-md translate-x-1"
-              aria-hidden="true"></span></button
-          >
+              aria-hidden="true"></span></button>
         </div>
       </div>
     </div>
