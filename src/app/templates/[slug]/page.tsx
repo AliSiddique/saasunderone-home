@@ -32,7 +32,7 @@ export default function page({params}: Props) {
             image:"/techs/jobboard-logo.webp",
             url:"/templates/job-board",
             link:"https://jobs.saasunderone.com",
-            screenshot:"/images/templates/job.png",
+            screenshot:"/images/templates/jobs.png",
             docs:"https://docs.saasunderone.com",
             coming_soon:false,
             buy_link:"https://saasunderone.lemonsqueezy.com/buy/83b69ec9-f102-4e6a-9016-dc01c3a03f2e"
